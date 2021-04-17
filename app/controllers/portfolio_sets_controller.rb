@@ -21,4 +21,18 @@ class PortfolioSetsController < ApplicationController
   def show
     @portfolio_item = PortfolioSet.find(params[:id])
   end
+
+  def edit
+    @portfolio_item = PortfolioSet.find(params[:id])
+  end
+
+  def update
+    @portfolio_item = PortfolioSet.find(params[:id])
+    if @portfolio_item.update(params.require(:portfolio_set).permit(:title, :subtitle, :body, :main_image,
+                                                                    :thumb_image))
+      redirect_to portfolio_sets_path
+    else
+      render :edit
+    end
+  end
 end

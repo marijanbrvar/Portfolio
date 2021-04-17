@@ -7,5 +7,6 @@
 	<div><%= item.body %></div>
 	<div><%= image_tag item.thumb_image %></div>
 	<%= link_to 'View', portfolio_set_path(item) %>
+	<%= link_to 'Edit', edit_portfolio_set_path(item) %>
 	<hr>
 <%end%>
