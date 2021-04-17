@@ -19,15 +19,15 @@ class PortfolioSetsController < ApplicationController
   end
 
   def show
-    @portfolio_item = PortfolioSet.find(params[:id])
+    @portfolio_item = PortfolioSet.friendly.find(params[:id])
   end
 
   def edit
-    @portfolio_item = PortfolioSet.find(params[:id])
+    @portfolio_item = PortfolioSet.friendly.find(params[:id])
   end
 
   def update
-    @portfolio_item = PortfolioSet.find(params[:id])
+    @portfolio_item = PortfolioSet.friendly.find(params[:id])
     if @portfolio_item.update(params.require(:portfolio_set).permit(:title, :subtitle, :body, :main_image,
                                                                     :thumb_image))
       redirect_to portfolio_sets_path
@@ -37,7 +37,7 @@ class PortfolioSetsController < ApplicationController
   end
 
   def destroy
-    @portfolio_item = PortfolioSet.find(params[:id])
+    @portfolio_item = PortfolioSet.friendly.find(params[:id])
     @portfolio_item.destroy
 
     redirect_to portfolio_sets_path
