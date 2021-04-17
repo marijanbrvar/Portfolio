@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-# frozen_string_literal: true
-
->>>>>>> model-generator
 require 'test_helper'
 
 class PagesControllerTest < ActionDispatch::IntegrationTest

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-# frozen_string_literal: true
-
->>>>>>> model-generator
 require 'application_system_test_case'
 
 class BlogsTest < ApplicationSystemTestCase

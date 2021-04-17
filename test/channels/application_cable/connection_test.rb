@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-require 'test_helper'
-=======
-# frozen_string_literal: true
->>>>>>> model-generator
-
 require 'test_helper'
 
 module ApplicationCable
