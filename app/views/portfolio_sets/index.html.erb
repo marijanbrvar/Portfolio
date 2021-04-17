@@ -5,7 +5,7 @@
 <%= new_portfolio_set_path %> <br>
 <%= new_portfolio_set_url %> <br>
 <% @portfolio_items.each do |item| %>
-	<div><%= link_to item.title, portfolio_set_path(item) %></div>
+	<div><%= link_to item.title, portfolio_show_path(item) %></div>
 	<div><%= item.subtitle %></div>
 	<div><%= item.body %></div>
 	<div><%= image_tag item.thumb_image %></div>
