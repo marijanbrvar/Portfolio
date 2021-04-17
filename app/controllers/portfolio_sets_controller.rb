@@ -35,4 +35,11 @@ class PortfolioSetsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @portfolio_item = PortfolioSet.find(params[:id])
+    @portfolio_item.destroy
+
+    redirect_to portfolio_sets_path
+  end
 end
