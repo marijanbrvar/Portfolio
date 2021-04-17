@@ -2,4 +2,6 @@
 <p>Find me in app/views/pages/home.html.erb</p>
 
 
-<%= @posts.inspect%>
+<% @posts.all.each do |post|%>
+<li><div><%= post.title %></div> <div><%= post.body %></div></li>
+<% end %>
