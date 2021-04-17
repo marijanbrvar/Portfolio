@@ -21,5 +21,16 @@ end
 		percent_utilized: 15 )
 end
 
-puts "9 times Blog post created"
-puts "5 times Skill created"
+3.times do |portfolio_item|
+	PortfolioSet.create!(
+		title: "Portfolio title: #{portfolio_item}",
+		subtitle: "My great service",
+		body: "He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. ",
+		main_image: "https://picsum.photos/600/400",
+		thumb_image: "https://picsum.photos/350/150",
+		)
+end
+
+puts "9 times Blog post items created"
+puts "5 times Skill items created"
+puts "3 times Portfolio set item created"
