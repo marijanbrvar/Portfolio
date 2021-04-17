@@ -1,10 +1,11 @@
 <h1>Portfolio items</h1>
 
-
-<% @portfoilos.each do |item| %>
+<%= link_to 'New Portfolio Set', new_portfolio_set_path %>
+<% @portfolio_items.each do |item| %>
 	<div><%= item.title %></div>
 	<div><%= item.subtitle %></div>
 	<div><%= item.body %></div>
 	<div><%= image_tag item.thumb_image %></div>
+	<%= link_to 'View', portfolio_set_path(item) %>
 	<hr>
 <%end%>
