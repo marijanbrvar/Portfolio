@@ -3,6 +3,14 @@ class PortfolioSetsController < ApplicationController
     @portfolio_items = PortfolioSet.all
   end
 
+  def vuejs
+    @vuejs_portfolio_items = PortfolioSet.vuejs
+  end
+
+  def ruby_on_rails
+    @ruby_on_rails_items = PortfolioSet.ruby_on_rails_portfolio_items
+  end
+
   def new
     @portfolio_item = PortfolioSet.new
   end
