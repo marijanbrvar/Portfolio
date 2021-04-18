@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  devise_for :users, path: '', path_names: {sign_in: "login", sign_out: 'logout', sign_up: 'register'}
   resources :portfolio_sets, except: [:show]
   get 'portfolio/:id', to: 'portfolio_sets#show', as: 'portfolio_show'
   get 'vuejs-items', to: 'portfolio_sets#vuejs'
