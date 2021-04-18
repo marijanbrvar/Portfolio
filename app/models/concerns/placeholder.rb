@@ -1,7 +1,7 @@
 module Placeholder
-	extend ActiveSupport::Concern
+  extend ActiveSupport::Concern
 
-	def self.image_generator(height:, width:)
-		"https://picsum.photos/#{height}/#{width}"
-	end
+  def self.image_generator(height:, width:)
+    "https://picsum.photos/#{height}/#{width}"
+  end
 end

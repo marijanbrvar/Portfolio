@@ -17,7 +17,8 @@ class PortfolioSetsController < ApplicationController
   end
 
   def create
-    @portfolio_item = PortfolioSet.new(params.require(:portfolio_set).permit(:title, :subtitle, :body,:main_image, :thumb_image, technologies_attributes: [:name]))
+    @portfolio_item = PortfolioSet.new(params.require(:portfolio_set).permit(:title, :subtitle, :body, :main_image,
+                                                                             :thumb_image, technologies_attributes: [:name]))
 
     if @portfolio_item.save
       redirect_to portfolio_sets_path
