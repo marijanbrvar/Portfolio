@@ -16,6 +16,16 @@
     <%= form.text_area :body %>
   </div>
 
+  <ul>
+    <%= form.fields_for :technologies do |trchnology_form| %>
+    <li>
+      <%= trchnology_form.label :name %>
+      <%= trchnology_form.text_field :name %>
+      
+    </li>
+    <% end %>
+  </ul>
+
   <div class="field">
     <%= form.label :main_image %>
     <%= form.text_area :main_image %>
