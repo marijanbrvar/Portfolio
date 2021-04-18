@@ -19,11 +19,15 @@ Blog.create!(
 	body: "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.", topic_id: Topic.last.id )
 end
 
+puts "9 times Blog post items created"
+
 5.times do |skill|
 	Skill.create!(
 		title: 'Rails #{skill}',
 		percent_utilized: 15 )
 end
+
+puts "5 times Skill items created"
 
 8.times do |portfolio_item|
 	PortfolioSet.create!(
@@ -35,6 +39,8 @@ end
 		)
 end
 
+puts "8 times Portfolio set item created Ruby"
+
 1.times do |portfolio_item|
 	PortfolioSet.create!(
 		title: "Portfolio title: #{portfolio_item}",
@@ -45,8 +51,16 @@ end
 		)
 end
 
-puts "1 time Portfolio set item created Angular"
+puts "1 time Portfolio set item created Vuejs"
 
-puts "9 times Blog post items created"
-puts "5 times Skill items created"
-puts "8 times Portfolio set item created Ruby"
+3.times do |technology|
+	PortfolioSet.last.technologies.create!(
+		name: "Technology: #{technology}",
+		)
+end
+
+puts "3 time Technologies item created"
+
+
+
+
