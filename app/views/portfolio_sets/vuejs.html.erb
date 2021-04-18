@@ -1,0 +1,15 @@
+<h1>Vuejs Portfolio items</h1>
+
+<%= link_to 'New Portfolio Set', new_portfolio_set_path %> <br>
+
+<%= new_portfolio_set_path %> <br>
+<%= new_portfolio_set_url %> <br>
+<% @vuejs_portfolio_items.each do |item| %>
+	<div><%= link_to item.title, portfolio_show_path(item) %></div>
+	<div><%= item.subtitle %></div>
+	<div><%= item.body %></div>
+	<div><%= image_tag item.thumb_image %></div>
+	<%= link_to 'Edit', edit_portfolio_set_path(item) %>
+	<%= link_to 'Delete Portfolio Item', portfolio_set_path(item), method: :delete, data: {confirm: 'Are you sure?' } %>
+	<hr>
+<%end%>

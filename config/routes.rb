@@ -3,7 +3,8 @@
 Rails.application.routes.draw do
   resources :portfolio_sets, except: [:show]
   get 'portfolio/:id', to: 'portfolio_sets#show', as: 'portfolio_show'
-  
+  get 'vuejs-items', to: 'portfolio_sets#vuejs'
+
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
 
